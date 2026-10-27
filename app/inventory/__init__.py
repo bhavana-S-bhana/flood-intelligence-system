@@ -1,0 +1,3 @@
+"""
+Resource Inventory Management Module
+"""

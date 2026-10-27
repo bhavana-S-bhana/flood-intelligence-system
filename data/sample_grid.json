@@ -1,0 +1,192 @@
+{
+  "basin_name": "Kerala State Flood Monitoring Basin",
+  "center_lat": 10.5,
+  "center_lon": 76.2,
+  "zoom": 8,
+  "zones": [
+    {
+      "id": "Z1",
+      "name": "North Kerala (Kasaragod)",
+      "lat": 12.50,
+      "lon": 75.00,
+      "elevation_m": 212.0,
+      "population": 14200,
+      "flood_stage_m": 3.0,
+    
+
+"polygon": [
+  [12.80, 74.80],
+  [12.75, 74.95],
+  [12.65, 75.10],
+  [12.55, 75.30],
+  [12.35, 75.45],
+  [12.20, 75.50],
+  [12.15, 75.35],
+  [12.25, 75.15],
+  [12.40, 74.98],
+  [12.60, 74.85]
+]
+
+
+    },
+    {
+      "id": "Z2",
+      "name": "Kannur Region",
+      "lat": 11.87,
+      "lon": 75.37,
+      "elevation_m": 206.0,
+      "population": 22000,
+      "flood_stage_m": 3.5,
+      "polygon": [
+        [12.20, 75.20], [12.20, 75.70], [11.60, 75.80], [11.60, 75.25]
+      ]
+    },
+    {
+      "id": "Z3",
+      "name": "Wayanad",
+      "lat": 11.69,
+      "lon": 76.13,
+      "elevation_m": 198.0,
+      "population": 18420,
+      "flood_stage_m": 2.8,
+      "polygon": [
+        [12.00, 75.80], [12.00, 76.45], [11.40, 76.45], [11.40, 75.90]
+      ]
+    },
+    {
+      "id": "Z4",
+      "name": "Malappuram",
+      "lat": 11.07,
+      "lon": 76.07,
+      "elevation_m": 204.0,
+      "population": 26500,
+      "flood_stage_m": 3.2,
+      "polygon": [
+        [11.40, 75.75], [11.40, 76.35], [10.85, 76.40], [10.85, 75.80]
+      ]
+    },
+    {
+      "id": "Z5",
+      "name": "Kozhikode",
+      "lat": 11.25,
+      "lon": 75.78,
+      "elevation_m": 208.0,
+      "population": 19800,
+      "flood_stage_m": 3.4,
+      "polygon": [
+        [11.60, 75.40], [11.60, 75.90], [11.00, 75.95], [11.00, 75.50]
+      ]
+    },
+    {
+      "id": "Z6",
+      "name": "Thrissur",
+      "lat": 10.52,
+      "lon": 76.21,
+      "elevation_m": 215.0,
+      "population": 16100,
+      "flood_stage_m": 4.0,
+      "polygon": [
+        [10.85, 75.80], [10.85, 76.50], [10.20, 76.55], [10.20, 75.90]
+      ]
+    },
+    {
+      "id": "Z7",
+      "name": "Ernakulam",
+      "lat": 9.98,
+      "lon": 76.30,
+      "elevation_m": 203.0,
+      "population": 24500,
+      "flood_stage_m": 2.5,
+      "polygon": [
+        [10.20, 76.00], [10.20, 76.70], [9.70, 76.75], [9.70, 76.10]
+      ]
+    },
+    {
+      "id": "Z8",
+      "name": "South Kerala (Kottayam - Alappuzha - Kollam - TVM)",
+      "lat": 9.20,
+      "lon": 76.60,
+      "elevation_m": 210.0,
+      "population": 31000,
+      "flood_stage_m": 3.8,
+      "polygon": [
+        [9.70, 76.20], [9.70, 77.30], [8.30, 77.20], [8.30, 76.80]
+      ]
+    }
+  ],
+  "sensors": [
+    {"id": "S1", "name": "Kasaragod River Gauge", "zone_id": "Z1", "lat": 12.50, "lon": 75.00, "warning_m": 2.2, "critical_m": 3.0},
+    {"id": "S2", "name": "Kannur Coastal Sensor", "zone_id": "Z2", "lat": 11.87, "lon": 75.37, "warning_m": 3.0, "critical_m": 3.8},
+    {"id": "S3", "name": "Chalakudy / Wayanad Gauge", "zone_id": "Z3", "lat": 11.69, "lon": 76.13, "warning_m": 2.0, "critical_m": 2.7},
+    {"id": "S4", "name": "Bharathapuzha Monitor", "zone_id": "Z4", "lat": 11.07, "lon": 76.07, "warning_m": 2.5, "critical_m": 3.3},
+    {"id": "S5", "name": "Kozhikode Port Sensor", "zone_id": "Z5", "lat": 11.25, "lon": 75.78, "warning_m": 2.8, "critical_m": 3.6},
+    {"id": "S6", "name": "Thrissur Basin Sensor", "zone_id": "Z6", "lat": 10.52, "lon": 76.21, "warning_m": 3.2, "critical_m": 4.2},
+    {"id": "S7", "name": "Kochi Backwaters Monitor", "zone_id": "Z7", "lat": 9.98, "lon": 76.30, "warning_m": 1.8, "critical_m": 2.6},
+    {"id": "S8", "name": "South Estuary Sensor", "zone_id": "Z8", "lat": 9.20, "lon": 76.60, "warning_m": 3.0, "critical_m": 4.0}
+  ],
+  "depots": [
+    {
+      "id": "D1",
+      "name": "Kochi Depot",
+      "lat": 9.97,
+      "lon": 76.28,
+      "inventory": {
+        "rescue_boats": 20,
+        "medical_teams": 12,
+        "relief_kits": 500,
+        "water_pumps": 8,
+        "relief_shelters": 4
+      }
+    },
+    {
+      "id": "D2",
+      "name": "Kozhikode Depot",
+      "lat": 11.25,
+      "lon": 75.77,
+      "inventory": {
+        "rescue_boats": 15,
+        "medical_teams": 8,
+        "relief_kits": 300,
+        "water_pumps": 10,
+        "relief_shelters": 3
+      }
+    },
+    {
+      "id": "D3",
+      "name": "Thrissur Depot",
+      "lat": 10.52,
+      "lon": 76.20,
+      "inventory": {
+        "rescue_boats": 10,
+        "medical_teams": 10,
+        "relief_kits": 400,
+        "water_pumps": 6,
+        "relief_shelters": 2
+      }
+    },
+    {
+      "id": "D4",
+      "name": "Trivandrum Depot",
+      "lat": 8.52,
+      "lon": 76.93,
+      "inventory": {
+        "rescue_boats": 12,
+        "medical_teams": 15,
+        "relief_kits": 600,
+        "water_pumps": 12,
+        "relief_shelters": 5
+      }
+    }
+  ],
+  "roads": [
+    {"from": "D1", "to": "Z7", "distance_km": 15.0, "speed_kph": 50.0, "elev_min_m": 202.5},
+    {"from": "D1", "to": "Z3", "distance_km": 180.0, "speed_kph": 60.0, "elev_min_m": 195.0},
+    {"from": "D1", "to": "Z6", "distance_km": 65.0, "speed_kph": 55.0, "elev_min_m": 210.0},
+    {"from": "D2", "to": "Z5", "distance_km": 10.0, "speed_kph": 45.0, "elev_min_m": 205.0},
+    {"from": "D2", "to": "Z2", "distance_km": 70.0, "speed_kph": 50.0, "elev_min_m": 204.0},
+    {"from": "D2", "to": "Z1", "distance_km": 140.0, "speed_kph": 55.0, "elev_min_m": 210.0},
+    {"from": "D3", "to": "Z6", "distance_km": 12.0, "speed_kph": 50.0, "elev_min_m": 212.0},
+    {"from": "D3", "to": "Z4", "distance_km": 60.0, "speed_kph": 50.0, "elev_min_m": 202.0},
+    {"from": "D4", "to": "Z8", "distance_km": 80.0, "speed_kph": 60.0, "elev_min_m": 208.0}
+  ]
+}
