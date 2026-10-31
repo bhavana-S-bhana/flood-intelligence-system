@@ -9,8 +9,8 @@
       "name": "North Kerala (Kasaragod)",
       "lat": 12.50,
       "lon": 75.00,
-      "elevation_m": 212.0,
-      "population": 14200,
+      "elevation_m": 19.0,
+      "population": 1307375,
       "flood_stage_m": 3.0,
     
 
@@ -34,8 +34,8 @@
       "name": "Kannur Region",
       "lat": 11.87,
       "lon": 75.37,
-      "elevation_m": 206.0,
-      "population": 22000,
+      "elevation_m": 13,
+      "population": 2523003,
       "flood_stage_m": 3.5,
       "polygon": [
         [12.20, 75.20], [12.20, 75.70], [11.60, 75.80], [11.60, 75.25]
@@ -46,8 +46,8 @@
       "name": "Wayanad",
       "lat": 11.69,
       "lon": 76.13,
-      "elevation_m": 198.0,
-      "population": 18420,
+      "elevation_m": 724,
+      "population": 817420,
       "flood_stage_m": 2.8,
       "polygon": [
         [12.00, 75.80], [12.00, 76.45], [11.40, 76.45], [11.40, 75.90]
@@ -58,8 +58,8 @@
       "name": "Malappuram",
       "lat": 11.07,
       "lon": 76.07,
-      "elevation_m": 204.0,
-      "population": 26500,
+      "elevation_m": 44,
+      "population": 4112920,
       "flood_stage_m": 3.2,
       "polygon": [
         [11.40, 75.75], [11.40, 76.35], [10.85, 76.40], [10.85, 75.80]
@@ -70,8 +70,8 @@
       "name": "Kozhikode",
       "lat": 11.25,
       "lon": 75.78,
-      "elevation_m": 208.0,
-      "population": 19800,
+      "elevation_m":1,
+      "population": 3086293,
       "flood_stage_m": 3.4,
       "polygon": [
         [11.60, 75.40], [11.60, 75.90], [11.00, 75.95], [11.00, 75.50]
@@ -82,8 +82,8 @@
       "name": "Thrissur",
       "lat": 10.52,
       "lon": 76.21,
-      "elevation_m": 215.0,
-      "population": 16100,
+      "elevation_m": 2.8,
+      "population":3121200,
       "flood_stage_m": 4.0,
       "polygon": [
         [10.85, 75.80], [10.85, 76.50], [10.20, 76.55], [10.20, 75.90]
@@ -94,8 +94,8 @@
       "name": "Ernakulam",
       "lat": 9.98,
       "lon": 76.30,
-      "elevation_m": 203.0,
-      "population": 24500,
+      "elevation_m": 4,
+      "population": 3282388,
       "flood_stage_m": 2.5,
       "polygon": [
         [10.20, 76.00], [10.20, 76.70], [9.70, 76.75], [9.70, 76.10]
@@ -106,8 +106,8 @@
       "name": "South Kerala (Kottayam - Alappuzha - Kollam - TVM)",
       "lat": 9.20,
       "lon": 76.60,
-      "elevation_m": 210.0,
-      "population": 31000,
+      "elevation_m": 3,
+      "population": 1974551,
       "flood_stage_m": 3.8,
       "polygon": [
         [9.70, 76.20], [9.70, 77.30], [8.30, 77.20], [8.30, 76.80]
@@ -124,60 +124,60 @@
     {"id": "S7", "name": "Kochi Backwaters Monitor", "zone_id": "Z7", "lat": 9.98, "lon": 76.30, "warning_m": 1.8, "critical_m": 2.6},
     {"id": "S8", "name": "South Estuary Sensor", "zone_id": "Z8", "lat": 9.20, "lon": 76.60, "warning_m": 3.0, "critical_m": 4.0}
   ],
-  "depots": [
-    {
-      "id": "D1",
-      "name": "Kochi Depot",
-      "lat": 9.97,
-      "lon": 76.28,
-      "inventory": {
-        "rescue_boats": 20,
-        "medical_teams": 12,
-        "relief_kits": 500,
-        "water_pumps": 8,
-        "relief_shelters": 4
-      }
-    },
-    {
-      "id": "D2",
-      "name": "Kozhikode Depot",
-      "lat": 11.25,
-      "lon": 75.77,
-      "inventory": {
-        "rescue_boats": 15,
-        "medical_teams": 8,
-        "relief_kits": 300,
-        "water_pumps": 10,
-        "relief_shelters": 3
-      }
-    },
-    {
-      "id": "D3",
-      "name": "Thrissur Depot",
-      "lat": 10.52,
-      "lon": 76.20,
-      "inventory": {
-        "rescue_boats": 10,
-        "medical_teams": 10,
-        "relief_kits": 400,
-        "water_pumps": 6,
-        "relief_shelters": 2
-      }
-    },
-    {
-      "id": "D4",
-      "name": "Trivandrum Depot",
-      "lat": 8.52,
-      "lon": 76.93,
-      "inventory": {
-        "rescue_boats": 12,
-        "medical_teams": 15,
-        "relief_kits": 600,
-        "water_pumps": 12,
-        "relief_shelters": 5
-      }
+ "depots": [
+  {
+    "id": "D1",
+    "name": "Kochi Depot",
+    "lat": 9.97,
+    "lon": 76.28,
+    "inventory": {
+      "rescue_boats": 30,
+      "medical_teams": 25,
+      "relief_kits": 2500,
+      "water_pumps": 15,
+      "relief_shelters": 10
     }
-  ],
+  },
+  {
+    "id": "D2",
+    "name": "Kozhikode Depot",
+    "lat": 11.25,
+    "lon": 75.77,
+    "inventory": {
+      "rescue_boats": 25,
+      "medical_teams": 20,
+      "relief_kits": 2000,
+      "water_pumps": 15,
+      "relief_shelters": 8
+    }
+  },
+  {
+    "id": "D3",
+    "name": "Thrissur Depot",
+    "lat": 10.52,
+    "lon": 76.20,
+    "inventory": {
+      "rescue_boats": 25,
+      "medical_teams": 25,
+      "relief_kits": 2500,
+      "water_pumps": 15,
+      "relief_shelters": 8
+    }
+  },
+  {
+    "id": "D4",
+    "name": "Trivandrum Depot",
+    "lat": 8.52,
+    "lon": 76.93,
+    "inventory": {
+      "rescue_boats": 25,
+      "medical_teams": 25,
+      "relief_kits": 2500,
+      "water_pumps": 15,
+      "relief_shelters": 10
+    }
+  }
+],
   "roads": [
     {"from": "D1", "to": "Z7", "distance_km": 15.0, "speed_kph": 50.0, "elev_min_m": 202.5},
     {"from": "D1", "to": "Z3", "distance_km": 180.0, "speed_kph": 60.0, "elev_min_m": 195.0},

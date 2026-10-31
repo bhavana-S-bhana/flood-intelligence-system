@@ -78,25 +78,25 @@ Object.values(depots || {}).forEach((depot) => {
 const pieData = [
   {
     name: 'Rescue Boats',
-    value: resourceTotals['rescue_boats'] || 0,
+    value: resourceTotals['rescue_boats']?.allocated || 0,
     total: resourceCapacity['rescue_boats'] || 0,
     color: '#3B82F6'
   },
   {
     name: 'Medical Teams',
-    value: resourceTotals['medical_teams'] || 0,
+    value: resourceTotals['medical_teams']?.allocated || 0,
     total: resourceCapacity['medical_teams'] || 0,
     color: '#14B8A6'
   },
   {
     name: 'Relief Kits',
-    value: resourceTotals['relief_kits'] || 0,
+    value: resourceTotals['relief_kits']?.allocated || 0,
     total: resourceCapacity['relief_kits'] || 0,
     color: '#EAB308'
   },
   {
     name: 'Water Pumps',
-    value: resourceTotals['water_pumps'] || 0,    
+    value: resourceTotals['water_pumps']?.allocated || 0,   
     total: resourceCapacity['water_pumps'] || 0,
     color: '#A855F7'
   },

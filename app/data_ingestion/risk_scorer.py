@@ -46,11 +46,24 @@ class RiskScoringEngine:
                 max_water_level = 0.0
 
             # Population & Elevation Vulnerability Score
+            # Population & Elevation Vulnerability Score
+                   # Population & Elevation Vulnerability Score
             pop = zone_info.get("population", 10000)
             elev = zone_info.get("elevation_m", 205.0)
-            
-            # Lower elevation + higher density = higher vulnerability
-            vuln_score = min(1.0, (pop / 40000.0) * 0.5 + max(0.0, (215.0 - elev) / 15.0) * 0.5)
+
+            # Assume 5% of district population is at risk
+            pop_at_risk = pop * 0.05
+
+            # Normalize population vulnerability
+            population_factor = min(1.0, pop_at_risk / 250000.0)
+
+            # Lower elevation increases vulnerability
+            elevation_factor = min(1.0, max(0.0, (215.0 - elev) / 15.0))
+
+            vuln_score = (
+                0.5 * population_factor +
+                0.5 * elevation_factor
+            )
 
             # Composite Risk Score Calculation (0.0 to 1.0)
             composite_risk = (
@@ -74,7 +87,7 @@ class RiskScoringEngine:
 
             # Calculate Resource Demand for this zone
             # Scale demands with population and severity multiplier
-            pop_k = pop / 1000.0  # Population in thousands
+            pop_k = pop_at_risk / 1000.0 # Population in thousands
             
             demands = {}
             for r_type, rates in RESOURCE_DEMAND_RATES.items():
@@ -85,6 +98,12 @@ class RiskScoringEngine:
                     if severity == "Critical":
                         raw_demand += rates["min_critical"]
                     demands[r_type] = math.ceil(raw_demand)
+                print(
+                f"{zone_id} | Risk: {composite_risk} | "
+                f"Severity: {severity} | Demand: {demands}",
+                flush=True
+            )
+           
 
             # Inundation Depth on roads in this zone
             road_flood_depth_m = max(0.0, round(max_water_level - (flood_stage * 0.8), 2))

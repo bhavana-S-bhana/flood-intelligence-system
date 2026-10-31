@@ -39,7 +39,12 @@ class SensorDataIngestion:
             flood_stage = zone.get("flood_stage_m", 3.0)
 
             # Local elevation factor (lower elevation = higher flood level)
-            elevation_risk_factor = max(0.8, (215.0 - base_elevation) / 10.0)
+                       # Local elevation factor (lower elevation = higher flood risk)
+            elevation_risk_factor = np.clip(
+                1.0 + (100.0 - base_elevation) / 500.0,
+                0.8,
+                1.2
+            )
             
             # Simulated water level above riverbed (meters)
             water_level_m = round(

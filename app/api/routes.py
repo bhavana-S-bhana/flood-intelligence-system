@@ -39,6 +39,7 @@ resource_mgr = ResourceManager()
 routing_engine = GeospatialRoutingEngine()
 solver = OptimizationSolver()
 # Dynamic Population-at-Risk Calculation
+# Dynamic Population-at-Risk Calculation
 def calculate_dynamic_population_risk(
     baseline_population,
     baseline_water_level,
@@ -48,26 +49,28 @@ def calculate_dynamic_population_risk(
 ):
     """
     Calculates dynamic population at risk based on
-    water-level increase and evacuation progress.
-
-    P_exposed(t) = P0 * (1 + alpha * Δh)
-    P_risk(t) = P_exposed(t) - min(P_exposed(t), Evacuated(t))
+    5% baseline exposure, water-level increase and evacuation.
     """
 
+    # Assume 5% of the district population is initially at risk
+    base_population_at_risk = baseline_population * 0.05
+
+    # Calculate water-level increase
     delta_h = max(0.0, current_water_level - baseline_water_level)
 
+    # Calculate dynamically exposed population
     exposed_population = round(
-        baseline_population * (1 + alpha * delta_h)
+        base_population_at_risk * (1 + alpha * delta_h)
     )
 
+    # Calculate evacuated population
     evacuated_population = min(
         exposed_population,
         max(0, round(evacuated_population))
     )
 
-    population_at_risk = (
-        exposed_population - evacuated_population
-    )
+    # Calculate remaining population at risk
+    population_at_risk = exposed_population - evacuated_population
 
     return {
         "exposed_population": exposed_population,
@@ -75,7 +78,6 @@ def calculate_dynamic_population_risk(
         "population_at_risk": population_at_risk,
         "delta_water_level": round(delta_h, 2)
     }
-
 @app.get("/")
 def read_root():
     return {
@@ -269,7 +271,26 @@ def get_simulation_state(step: int = Query(2), scenario: str = Query("cloudburst
         "depots": depots,
         "alerts": alerts,
         "transit_routes": transit_routes,
-        "allocated_resources": allocated_resources,
+        "allocated_resources": {
+    resource: {
+        "allocated": quantity,
+        "total": sum(
+            depot["initial_inventory"].get(resource, 0)
+            for depot in depots.values()
+        ),
+        "percentage": round(
+            quantity / sum(
+                depot["initial_inventory"].get(resource, 0)
+                for depot in depots.values()
+            ) * 100, 1
+        ) if sum(
+            depot["initial_inventory"].get(resource, 0)
+            for depot in depots.values()
+        ) > 0 else 0,
+        "status": "Fully Allocated" if quantity > 0 else "Not Allocated"
+    }
+    for resource, quantity in allocated_resources.items()
+},
         "z3_dispatches": z3_dispatches,
         "total_allocated_sum": sum(allocated_resources.values()),
         "total_capacity_sum": sum(
